@@ -239,9 +239,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C6F61FCD1703DFC70073032E /* Tidy */ = {
+		C6F61FCD1703DFC70073032E /* tidy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6F61FDC1703DFC70073032E /* Build configuration list for PBXNativeTarget "Tidy" */;
+			buildConfigurationList = C6F61FDC1703DFC70073032E /* Build configuration list for PBXNativeTarget "tidy" */;
 			buildPhases = (
 				C6F61FCA1703DFC70073032E /* Sources */,
 				C6F61FCB1703DFC70073032E /* Frameworks */,
@@ -251,7 +251,7 @@
 			);
 			dependencies = (
 			);
-			name = Tidy;
+			name = tidy;
 			productName = Tidy;
 			productReference = C6F61FCE1703DFC70073032E /* libTidy.a */;
 			productType = "com.apple.product-type.library.static";
@@ -277,7 +277,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C6F61FCD1703DFC70073032E /* Tidy */,
+				C6F61FCD1703DFC70073032E /* tidy */,
 			);
 		};
 /* End PBXProject section */
@@ -401,13 +401,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6F61FDC1703DFC70073032E /* Build configuration list for PBXNativeTarget "Tidy" */ = {
+		C6F61FDC1703DFC70073032E /* Build configuration list for PBXNativeTarget "tidy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C6F61FDD1703DFC70073032E /* Debug */,
 				C6F61FDE1703DFC70073032E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
