@@ -111,7 +111,7 @@
 		C6DEC3991703EBB200F70EE0 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		C6DEC39A1703EBB200F70EE0 /* win32tc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = win32tc.c; sourceTree = "<group>"; };
 		C6DEC39B1703EBB200F70EE0 /* win32tc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = win32tc.h; sourceTree = "<group>"; };
-		C6F61FCE1703DFC70073032E /* libTidy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTidy.a; path = libtidy.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6F61FCE1703DFC70073032E /* libtidy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtidy.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +207,7 @@
 		C6F61FCF1703DFC70073032E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C6F61FCE1703DFC70073032E /* libTidy.a */,
+				C6F61FCE1703DFC70073032E /* libtidy.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 			);
 			name = tidy;
 			productName = Tidy;
-			productReference = C6F61FCE1703DFC70073032E /* libTidy.a */;
+			productReference = C6F61FCE1703DFC70073032E /* libtidy.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
