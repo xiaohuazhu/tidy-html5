@@ -68,6 +68,10 @@
 extern "C" {
 #endif
 
+#if defined(ANDROID) || defined(__ANDROID__)
+typedef unsigned long ulong;
+#endif
+
 /** @defgroup Opaque Opaque Types
 **
 ** Cast to implementation types within lib.
