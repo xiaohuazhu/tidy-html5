@@ -1,8 +1,6 @@
 #!/bin/sh
 
-build_version=2
-ANDROID_PLATFORM=android-16
-archs="armeabi armeabi-v7a x86"
+build_version=3
 package_name=tidy-html5-android
 
 current_dir="`pwd`"
@@ -28,6 +26,14 @@ mkdir -p "$current_dir/$package_name-$build_version/include"
 cp "$current_dir/../include"/*.h "$current_dir/$package_name-$build_version/include"
 
 # Start building.
+ANDROID_PLATFORM=android-16
+archs="armeabi armeabi-v7a x86"
+for arch in $archs ; do
+  TARGET_ARCH_ABI=$arch
+  build
+done
+ANDROID_PLATFORM=android-21
+archs="arm64-v8a"
 for arch in $archs ; do
   TARGET_ARCH_ABI=$arch
   build
