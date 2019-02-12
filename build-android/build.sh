@@ -14,11 +14,18 @@ function build {
   rm -rf "$current_dir/obj"
 
   cd "$current_dir/jni"
-  $ANDROID_NDK/ndk-build TARGET_PLATFORM=$ANDROID_PLATFORM TARGET_ARCH_ABI=$TARGET_ARCH_ABI
+  echo Building
+  $ANDROID_NDK/ndk-build
 
-  mkdir -p "$current_dir/$package_name-$build_version/libs/$TARGET_ARCH_ABI"
-  cp "$current_dir/obj/local/$TARGET_ARCH_ABI/libtidy.a" "$current_dir/$package_name-$build_version/libs/$TARGET_ARCH_ABI"
+  archs="x86_64 armeabi-v7a x86 arm64-v8a"
+  for arch in $archs ; do
+    TARGET_ARCH_ABI=$arch
+    mkdir -p "$current_dir/$package_name-$build_version/libs/$TARGET_ARCH_ABI"
+    cp "$current_dir/obj/local/$TARGET_ARCH_ABI/libtidy.a" "$current_dir/$package_name-$build_version/libs/$TARGET_ARCH_ABI"
+  done
   rm -rf "$current_dir/src"
+  rm -rf "$current_dir/obj"
+  rm -rf "$current_dir/libs"
 }
 
 # Includes
@@ -26,12 +33,7 @@ mkdir -p "$current_dir/$package_name-$build_version/include"
 cp "$current_dir/../include"/*.h "$current_dir/$package_name-$build_version/include"
 
 # Start building.
-ANDROID_PLATFORM=android-21
-archs="x86_64 armeabi-v7a x86 arm64-v8a"
-for arch in $archs ; do
-  TARGET_ARCH_ABI=$arch
-  build
-done
+build
 
 cd "$current_dir"
 zip -qry "$package_name-$build_version.zip" "$package_name-$build_version"
